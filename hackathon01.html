@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VISION VAULT</title>
+    <link rel="stylesheet"href="c:\Users\G Madhu Goud\OneDrive\Desktop\HTML .html\style.hackathon.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo-container">
+                <img src="hackathon.jpg" alt="Byte Force Logo" class="logo">
+                <span class="brand-name">Vision Vault</span>
+            </div>
+            <div class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Discover Your Perfect Career Path</h1>
+                <p>Let AI guide you to your dream career based on your skills and interests</p>
+                <button class="cta-button" onclick="startAssessment()">Start Assessment</button>
+            </div>
+        </section>
+
+        <div id="assessment-form" class="assessment-container hidden">
+            <div class="form-card">
+                <div class="progress-bar">
+                    <div class="progress" id="progress"></div>
+                </div>
+                
+                <form id="career-form">
+                    <div class="form-step" id="step1">
+                        <h2>Personal Information</h2>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <button type="button" class="next-btn" onclick="nextStep(1)">Next</button>
+                    </div>
+
+                    <div class="form-step hidden" id="step2">
+                        <h2>Educational Background</h2>
+                        <div class="form-group">
+                            <label for="education-level">Highest Education Level</label>
+                            <select id="education-level" name="education-level" required>
+                                <option value="">Select Education Level</option>
+                                <option value="high-school">High School</option>
+                                <option value="bachelors">Bachelor's Degree</option>
+                                <option value="masters">Master's Degree</option>
+                                <option value="phd">Ph.D.</option>
+                                <option value="other">other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="field-of-study">Field of Study</label>
+                            <input type="text" id="field-of-study" name="field-of-study">
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="back-btn" onclick="prevStep(2)">Previous</button>
+                            <button type="button" class="next-btn" onclick="nextStep(2)">Next</button>
+                        </div>
+                    </div>
+
+                    <div class="form-step hidden" id="step3">
+                        <h2>Interests & Skills</h2>
+                        <div class="form-group">
+                            <label>Areas of Interest</label>
+                            <div class="interests-grid">
+                                <label class="interest-item">
+                                    <input type="checkbox" name="interests" value="technology">
+                                    <span>Technology</span>
+                                </label>
+                                <label class="interest-item">
+                                    <input type="checkbox" name="interests" value="science">
+                                    <span>Science</span>
+                                </label>
+                                <label class="interest-item">
+                                    <input type="checkbox" name="interests" value="business">
+                                    <span>Business</span>
+                                </label>
+                                <label class="interest-item">
+                                    <input type="checkbox" name="interests" value="arts">
+                                    <span>Arts</span>
+                                </label>
+                                <label class="interest-item">
+                                    <input type="checkbox" name="interests" value="healthcare">
+                                    <span>Healthcare</span>
+                                </label>
+                                <label class="interest-item">
+                                    <input type="checkbox" name="interests" value="education">
+                                    <span>Education</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="back-btn" onclick="prevStep(3)">Previous</button>
+                            <button type="submit" class="submit-btn">Get Recommendations</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <img src="hackathon.jpg" alt="Byte Force Logo" class="footer-logo">
+                <p>Powered by Byte Force</p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <p>Email: contact@visionvault.com</p>
+                <p>Phone: (555) 123-4567</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class='bx bxl-linkedin' ></i>LinkedIn</a>
+                    <a href="#" class="social-link"><i class='bx bxl-twitter' ></i>Twitter</a>
+                    <a href="#" class="social-link"><i class='bx bxl-instagram-alt' ></i>Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Vision Vault. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+<script src="first.js"></script>
+</html>
